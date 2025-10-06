@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>《超凡一步 | 在一起，鸿蒙智行一路向前》尊界篇直播策划案</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #1a1a1a;
+            --secondary-color: #c9a96e;
+            --accent-color: #d4af37;
+            --text-color: #2c2c2c;
+            --light-gray: #f8f9fa;
+            --medium-gray: #e9ecef;
+            --dark-gray: #495057;
+            --white: #ffffff;
+            --shadow: 0 4px 20px rgba(0,0,0,0.1);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            line-height: 1.7;
+            color: var(--text-color);
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        .header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--dark-gray) 100%);
+            color: var(--white);
+            padding: 60px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="%23ffffff" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .main-title {
+            font-family: 'Noto Serif SC', serif;
+            font-size: 3.5rem;
+            font-weight: 900;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            letter-spacing: 2px;
+        }
+
+        .subtitle {
+            font-size: 1.8rem;
+            font-weight: 300;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .program-info {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.1rem;
+        }
+
+        .info-item i {
+            color: var(--secondary-color);
+            font-size: 1.3rem;
+        }
+
+        /* Navigation */
+        .nav {
+            background: var(--white);
+            padding: 20px 0;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-list {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            list-style: none;
+        }
+
+        .nav-item a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            padding: 10px 20px;
+            border-radius: 25px;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-item a:hover {
+            background: var(--secondary-color);
+            color: var(--white);
+            transform: translateY(-2px);
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 80px 0;
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-family: 'Noto Serif SC', serif;
+            font-size: 2.8rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 60px;
+            color: var(--primary-color);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: var(--secondary-color);
+        }
+
+        .card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid var(--medium-gray);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+        }
+
+        .card-title {
+            font-family: 'Noto Serif SC', serif;
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .card-title i {
+            color: var(--secondary-color);
+            font-size: 1.5rem;
+        }
+
+        /* Theme Introduction */
+        .theme-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .theme-item {
+            background: linear-gradient(135deg, var(--light-gray) 0%, var(--white) 100%);
+            padding: 30px;
+            border-radius: 15px;
+            border-left: 5px solid var(--secondary-color);
+            transition: var(--transition);
+        }
+
+        .theme-item:hover {
+            transform: translateX(10px);
+            box-shadow: var(--shadow);
+        }
+
+        .theme-item h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        /* Program Info Table */
+        .info-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 30px;
+            background: var(--white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .info-table th,
+        .info-table td {
+            padding: 20px;
+            text-align: left;
+            border-bottom: 1px solid var(--medium-gray);
+        }
+
+        .info-table th {
+            background: var(--primary-color);
+            color: var(--white);
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .info-table tr:hover {
+            background: var(--light-gray);
+        }
+
+        .info-table td:first-child {
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        /* Scene Design */
+        .scene-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .scene-card {
+            background: var(--white);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .scene-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.2);
+        }
+
+        .scene-header {
+            background: linear-gradient(135deg, var(--secondary-color) 0%, var(--accent-color) 100%);
+            color: var(--white);
+            padding: 25px;
+            text-align: center;
+        }
+
+        .scene-title {
+            font-family: 'Noto Serif SC', serif;
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .scene-subtitle {
+            opacity: 0.9;
+            font-size: 1rem;
+        }
+
+        .scene-content {
+            padding: 30px;
+        }
+
+        .scene-description {
+            margin-bottom: 25px;
+            line-height: 1.8;
+            color: var(--dark-gray);
+        }
+
+        .scene-highlights {
+            background: var(--light-gray);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .scene-highlights h4 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .scene-highlights ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .scene-highlights li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .scene-highlights li::before {
+            content: '▶';
+            position: absolute;
+            left: 0;
+            color: var(--secondary-color);
+            font-size: 0.8rem;
+        }
+
+        /* Location Selection */
+        .location-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .location-card {
+            background: var(--white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .location-card:hover {
+            transform: scale(1.02);
+        }
+
+        .location-image {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .location-image::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.3) 100%);
+        }
+
+        .location-content {
+            padding: 25px;
+        }
+
+        .location-name {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        .location-reason {
+            color: var(--dark-gray);
+            line-height: 1.6;
+        }
+
+        /* Supporting Materials */
+        .materials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .material-item {
+            background: var(--white);
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .material-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .material-icon {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+        }
+
+        .material-title {
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .material-desc {
+            color: var(--dark-gray);
+            font-size: 0.9rem;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--primary-color);
+            color: var(--white);
+            text-align: center;
+            padding: 40px 0;
+            margin-top: 80px;
+        }
+
+        .footer-content {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .main-title {
+                font-size: 2.5rem;
+            }
+
+            .subtitle {
+                font-size: 1.4rem;
+            }
+
+            .program-info {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .nav-list {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .scene-container {
+                grid-template-columns: 1fr;
+            }
+
+            .section {
+                padding: 40px 0;
+            }
+
+            .card {
+                padding: 25px;
+            }
+        }
+
+        /* Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        /* Scroll Progress Bar */
+        .scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--secondary-color), var(--accent-color));
+            z-index: 1000;
+            transition: width 0.1s ease;
+        }
+    </style>
+</head>
+<body>
+    <div class="scroll-progress" id="scrollProgress"></div>
+    
+    <header class="header">
+        <div class="container">
+            <div class="header-content fade-in-up">
+                <h1 class="main-title">超凡一步 | 在一起，鸿蒙智行一路向前</h1>
+                <p class="subtitle">尊界篇直播策划案</p>
+                <div class="program-info">
+                    <div class="info-item">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>2025年11月</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <span>40分钟</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>上海外滩</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-users"></i>
+                        <span>央视新闻 × 鸿蒙智行</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav class="nav">
+        <div class="container">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="#theme">节目主题</a></li>
+                <li class="nav-item"><a href="#info">节目信息</a></li>
+                <li class="nav-item"><a href="#scenes">环节设计</a></li>
+                <li class="nav-item"><a href="#locations">点位选择</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <!-- 节目主题介绍 -->
+        <section id="theme" class="section">
+            <div class="container">
+                <h2 class="section-title">节目主题：让汽车业皇冠闪耀中国人的光彩</h2>
+                
+                <div class="card fade-in-up">
+                    <p style="font-size: 1.1rem; line-height: 1.8; color: var(--dark-gray); margin-bottom: 30px;">
+                        新能源时代，中国汽车很争气，但中国汽车人心里还憋着口气，那就是造高端车的技术封锁。在鸿蒙智行牵头下，来自十几个省份220多家企业共同托举，只为完成中国汽车的高端之梦。尊界由此而生，也因此而成。
+                    </p>
+                    
+                    <p style="font-size: 1.1rem; line-height: 1.8; color: var(--dark-gray); margin-bottom: 30px;">
+                        直播内容以空间结构时间，从和平饭店的历史底蕴到洛克外滩源的现代艺术，从上海的城市高度到中国汽车工业的新高度，令外滩的历史底蕴与尊界的现代奢华相得益彰。本段直播将在东方大都会展示尊界的独特魅力，从画面美学上体现中国高端轿车与外滩海派腔调的共鸣，在中国经济的心脏见证中国汽车产业链的高端化突围。
+                    </p>
+
+                    <p style="font-size: 1.1rem; line-height: 1.8; color: var(--dark-gray); margin-bottom: 30px;">
+                        本段直播围绕"科技追光"、"工艺极致"、"人的力量"三个关键词，展现尊界如何捅破百万级轿车的天花板，以鸿蒙生态重新定义豪华出行体验，以突破传统的工艺打造艺术品级别的汽车内饰，以工程师设计师的匠心精神汇聚成尊界的卓越品质，用中国供应链、中国技术、中国设计，打造属于中国人的高端轿车品牌，让中国高端车成为全球汽车产业的新标杆。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 节目信息 -->
+        <section id="info" class="section">
+            <div class="container">
+                <h2 class="section-title">节目信息</h2>
+                
+                <div class="card fade-in-up">
+                    <h3 class="card-title">
+                        <i class="fas fa-info-circle"></i>
+                        基本信息
+                    </h3>
+                    
+                    <table class="info-table">
+                        <thead>
+                            <tr>
+                                <th>项目</th>
+                                <th>详情</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><i class="fas fa-tv"></i> 节目名称</td>
+                                <td>《超凡一步 | 在一起，鸿蒙智行一路向前》尊界篇</td>
+                            </tr>
+                            <tr>
+                                <td><i class="fas fa-calendar"></i> 直播时间</td>
+                                <td>2025年11月</td>
+                            </tr>
+                            <tr>
+                                <td><i class="fas fa-clock"></i> 节目时长</td>
+                                <td>约40分钟（总直播时长4小时）</td>
+                            </tr>
+                            <tr>
+                                <td><i class="fas fa-map-marker-alt"></i> 直播地点</td>
+                                <td>上海和平饭店、洛克·外滩源街区、上海外滩美术馆</td>
+                            </tr>
+                            <tr>
+                                <td><i class="fas fa-users"></i> 主办单位</td>
+                                <td>央视新闻 × 鸿蒙智行</td>
+                            </tr>
+                          
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="card fade-in-up">
+                    <h3 class="card-title">
+                        <i class="fas fa-user-friends"></i>
+                        登场人物
+                    </h3>
+                    
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px;">
+                        <div style="background: var(--light-gray); padding: 20px; border-radius: 10px; border-left: 4px solid var(--secondary-color);">
+                            <h4 style="color: var(--primary-color); margin-bottom: 10px;"><i class="fas fa-microphone"></i> 主持人</h4>
+                            <p><strong>撒贝宁</strong> - 央视著名主持人</p>
+                        </div>
+                        <div style="background: var(--light-gray); padding: 20px; border-radius: 10px; border-left: 4px solid var(--secondary-color);">
+                            <h4 style="color: var(--primary-color); margin-bottom: 10px;"><i class="fas fa-rocket"></i> 华为代表</h4>
+                            <p><strong>余承东</strong> - 华为常务董事、终端BG董事长</p>
+                        </div>
+                        <div style="background: var(--light-gray); padding: 20px; border-radius: 10px; border-left: 4px solid var(--secondary-color);">
+                            <h4 style="color: var(--primary-color); margin-bottom: 10px;"><i class="fas fa-industry"></i> 江淮代表</h4>
+                            <p><strong>项兴初</strong> - 江汽集团董事长</p>
+                        </div>
+                        <div style="background: var(--light-gray); padding: 20px; border-radius: 10px; border-left: 4px solid var(--secondary-color);">
+                            <h4 style="color: var(--primary-color); margin-bottom: 10px;"><i class="fas fa-star"></i> 明星用户</h4>
+                            <p><strong>陈赫</strong> - 演员、尊界车主</p>
+                        </div>
+                        <div style="background: var(--light-gray); padding: 20px; border-radius: 10px; border-left: 4px solid var(--secondary-color);">
+                            <h4 style="color: var(--primary-color); margin-bottom: 10px;"><i class="fas fa-music"></i> 艺术团体</h4>
+                            <p><strong>彩虹合唱团</strong> - 上海知名合唱团</p>
+                        </div>
+                        <div style="background: var(--light-gray); padding: 20px; border-radius: 10px; border-left: 4px solid var(--secondary-color);">
+                            <h4 style="color: var(--primary-color); margin-bottom: 10px;"><i class="fas fa-cogs"></i> 技术团队</h4>
+                            <p><strong>供应链企业负责人</strong> - 1-2位<br><strong>江淮尊界超级工厂工艺负责人</strong> - 2-5位</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card fade-in-up">
+                    <h3 class="card-title">
+                        <i class="fas fa-list-ol"></i>
+                        简要流程
+                    </h3>
+                    
+                    <table class="info-table">
+                        <thead>
+                            <tr>
+                                <th>环节</th>
+                                <th>时间</th>
+                                <th>地点</th>
+                                <th>核心内容</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>暖场短片</strong></td>
+                                <td>2分钟</td>
+                                <td>上海外滩</td>
+                                <td>尊界路跑+嘉年华海采，体现消费者观感</td>
+                            </tr>
+                            <tr>
+                                <td><strong>相遇环节</strong></td>
+                                <td>3分钟</td>
+                                <td>和平饭店</td>
+                                <td>撒贝宁与余承东下车，项兴初和陈赫迎接，开场寒暄</td>
+                            </tr>
+                            <tr>
+                                <td><strong>边走边聊</strong></td>
+                                <td>5分钟</td>
+                                <td>洛克·外滩源</td>
+                                <td>Citywalk形式，陈赫分享用车体验和上海车友评价</td>
+                            </tr>
+                            <tr>
+                                <td><strong>艺术展览</strong></td>
+                                <td>15分钟</td>
+                                <td>上海外滩美术馆</td>
+                                <td>以展品形式介绍尊界内饰工艺设计，供应链伙伴现场分享</td>
+                            </tr>
+                            <tr>
+                                <td><strong>思想汇</strong></td>
+                                <td>15分钟</td>
+                                <td>外滩美术馆门口喷泉</td>
+                                <td>音乐思想汇，介绍尊界制造过程中的突破和意义</td>
+                            </tr>
+                            <tr>
+                                <td><strong>转场</strong></td>
+                                <td></td>
+                                <td>前往下一环节</td>
+                                <td>主持人和余承东上车赶往尚界部分</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- 节目环节设计 -->
+        <section id="scenes" class="section">
+            <div class="container">
+                <h2 class="section-title">节目环节设计</h2>
+                
+                <div class="scene-container">
+                    <!-- 暖场短片；尊界的奢雅都会嘉年华 -->
+                    <div class="scene-card fade-in-up">
+                        <div class="scene-header">
+                            <h3 class="scene-title">暖场短片</h3>
+                            <p class="scene-subtitle">上海外滩 · 2分钟</p>
+                        </div>
+                        <div class="scene-content">
+                            <div class="scene-description">
+                                提前在上海外滩进行尊界路跑拍摄，并选择点位组织尊界嘉年华活动，邀请社会各界特别是尊界上海车主和青年人群前来参与。嘉年华活动现场可设置尊界实车静态体验。央视新闻拍摄团队将在现场进行海采，请活动现场嘉宾谈对尊界实车的感受和体验。
+                            </div>
+							 <div class="scene-highlights">
+                                <h4>亮点设计：</h4>
+                                <ul>
+                                    <li>以嘉宾同期展现沪上用户对尊界品质的认可</li>
+                                    <li>以画面美学展现尊界艺术高定气质与上海海派风格的共鸣</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 场景一：相遇 -->
+                    <div class="scene-card fade-in-up">
+                        <div class="scene-header">
+                            <h3 class="scene-title">第一场景：相遇</h3>
+                            <p class="scene-subtitle">和平饭店 · 3分钟</p>
+                        </div>
+                        <div class="scene-content">
+                            <div class="scene-description">
+                                开场设计：无人机航拍外滩，镜头缓缓推进至尊界驶向和平饭店。人物登场：主持人和余承东从上一段直播现场赶来，项兴初和陈赫在和平饭店门口迎接。
+                                <br><br>
+                                内容重点：陈赫作为上海本地尊界车主，与项兴初一同介绍和平饭店象征的十里洋场百年风华。
+								和平饭店曾被誉为"远东第一楼"，是《繁花》取景地，也是浦江天际线和外滩万国建筑博览群的标志性建筑，见证了中华民族与世界接轨的沧桑历程。其洋气时髦典雅奢华的艺术气质与尊界的设计语言异曲同工。
+								从上海的全球视野和城市高度引申到中国汽车工业的新高度，介绍尊界S800的目标是"捅破百万级豪车的天花板"。
+                            </div>
+                            <div class="scene-highlights">
+                                <h4>亮点设计：</h4>
+                                <ul>
+                                    <li>和平饭店的历史底蕴与尊界的现代奢华形成时代对话</li>
+                                    <li>陆家嘴天际线发展历程类比中国汽车工业崛起轨迹</li>
+                                    <li>点明尊界S800代表中国高端车的新高度，树立全球新标杆</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 场景二：Citywalk -->
+                    <div class="scene-card fade-in-up">
+                        <div class="scene-header">
+                            <h3 class="scene-title">第二场景：Citywalk</h3>
+                            <p class="scene-subtitle">洛克·外滩源 · 5分钟</p>
+                        </div>
+                        <div class="scene-content">
+                            <div class="scene-description">
+                                形式设计：Citywalk形式，四人从和平饭店前往外滩源街区，沿大道漫步，自然对话。
+                                <br><br>
+                                内容重点：陈赫作为明星用户分享尊界的实际使用体验，特别是智能感、奢华感对驾乘体验的影响。
+								 <br><br>
+								余承东介绍尊界刷新了国产超豪华轿车多项纪录，强调尊界S800是献给时代的作品，正以科技智能重塑汽车业对高端的定义。
+								 <br><br>
+								项兴初分享尊界S800上市以来的台前幕后、冲击高端车制造的心路历程。
+								 <br><br>
+								撒贝宁点题，结合外滩源历史和街区风貌，阐明中国车冲击高端的意义，点出尊界象征的品质生活与外滩调性的契合。
+                            </div>
+                            <div class="scene-highlights">
+                                <h4>亮点设计：</h4>
+                                <ul>
+                                    <li>用户真实体验分享，增强说服力</li>
+                                    <li>外滩百年间见证万国豪车驶过，如今中国高端车在此展露峥嵘</li>
+                                    <li>中国汽车正以科技重塑豪华，与全球百年老店同台竞技</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 场景三：艺术展览 -->
+                    <div class="scene-card fade-in-up">
+                        <div class="scene-header">
+                            <h3 class="scene-title">第三场景：艺术展览</h3>
+                            <p class="scene-subtitle">外滩源·上海外滩美术馆 · 15分钟</p>
+                        </div>
+                        <div class="scene-content">
+                            <div class="scene-description">
+                                空间选择：尊界作为高端车型，具有更强的工艺品属性和艺术气质。外滩美术馆的现代艺术氛围与高端轿车的奢华定位相得益彰。
+                                <br><br>
+                                展示形式：在艺术空间中设置数个展台，将尊界的内饰工艺以艺术品形式展示，每处细节都是匠心之作。工艺解读：1-2位产业链合作企业负责人在现场讲解（涉空调、皮艺、木艺、金属件等均可），详细介绍设计美学和核心技术，体现"一车带全链"，展现中国汽车产业链在高端车制造中的新突破。
+                            </div>
+                            <div class="scene-highlights">
+                                <h4>亮点设计：</h4>
+                                <ul>
+                                    <li>突破传统汽车内饰件展示方式，以艺术品光影角度呈现</li>
+                                    <li>艺术与工业的完美结合，体现中国汽车人的匠心精神</li>
+                                    <li>供应链伙伴分享，体现产业生态力量</li>
+                                    <li>现场讲解，展现背后的人文故事和产业报国情怀</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 场景四：思想汇 -->
+                    <div class="scene-card fade-in-up">
+                        <div class="scene-header">
+                            <h3 class="scene-title">第四场景：思想汇</h3>
+                            <p class="scene-subtitle">外滩艺术馆门口喷泉 · 15分钟</p>
+                        </div>
+                        <div class="scene-content">
+                            <div class="scene-description">
+                                场地特色：外滩艺术馆门口的喷泉广场，具有现代感和艺术气息。需在现场摆放1-2辆尊界S800置景。
+                                <br><br>
+                                内容重点：彩虹合唱团在乐队的伴奏下，演唱一首歌。歌曲主题可围绕"创新""突破""品质生活"等关键词选取或创作。江淮工厂各重点车间工艺负责人置身其中一同演唱。
+								 <br><br>
+								演唱结束，余承东介绍鸿蒙智行正在创作年度主题曲，项兴初介绍演唱团队中的各重点车间工艺负责人，展现"尊界背后人的力量"。
+								 <br><br>
+								现场众人在水池前分享，介绍尊界高端化突围对中国汽车产业和中国制造的意义。
+								 <br><br>
+								陈赫代表尊界车主点明：拥有尊界不仅是交通工具，更是一个移动的智能终端，有着行业旗舰级的体验，代表了一种新的生活方式，非常符合外滩的都会气质，同时又有着不一样的科技意蕴和民族情怀。
+								 <br><br>
+								余承东、项兴初点题：中国拥有全球最完整、最灵活的供应链；拥有最富有创造力的工程师人才。一辆车，由上万个零部件组成。尊界S800的"破界"，离不开每一位供应链伙伴的"合力"。造一辆高端车，改变的不仅仅是一个产品，更是拉动了一整条产业链向上突围。过去我们追赶，今天我们并跑，在有些领域，我们已经开始领跑。
+								 <br><br>
+								撒贝宁点题：在工业品之外，中国的高端车也是一件艺术品，象征着一种结合了科技和艺术的品质生活方式。外滩曾是中国拥抱万国风情的窗口，如今我们在这个窗口自豪地向全世界介绍中国的科技新风情。
+                            </div>
+                            <div class="scene-highlights">
+                                <h4>亮点设计：</h4>
+                                <ul>
+                                    <li>喷泉作为背景，象征创新活力的源泉</li>
+                                    <li>彩虹合唱团表演，营造艺术氛围</li>
+                                    <li>一线工程师亮相，展现工匠精神</li>
+                                    <li>思想碰撞，探讨中国制造的未来</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 点位选择理由 -->
+        <section id="locations" class="section">
+            <div class="container">
+                <h2 class="section-title">点位选择与推荐</h2>
+                
+                <div class="card fade-in-up">
+                    <h3 class="card-title">
+                        <i class="fas fa-map-marked-alt"></i>
+                        主要点位选择理由
+                    </h3>
+                    
+                    <div class="location-grid">
+                        <div class="location-card">
+                            <div class="location-image" style="background-image: url('http://img.cztv.com/external_res/cnbluecloud/img/20241217/cms_1734414173_Sz64wMcW6D.png');"></div>
+                            <div class="location-content">
+                                <h4 class="location-name">和平饭店</h4>
+                                <p class="location-reason">
+                                    上海滩的标志性建筑，东西方文化交融的象征，承载着深厚的历史文化底蕴，曾被誉为"远东第一楼"。选择这里作为开场，既体现了上海的城市气质，又与尊界的高端定位相得益彰。
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="location-card">
+                            <div class="location-image" style="background-image: url('https://www.credaward.com/wp-content/uploads/2023/12/Luo_Ke_Wai_Tan_Yuan_Niao_Kan_-_She_Ying_Tian_Fang_Fang_2.jpg');"></div>
+                            <div class="location-content">
+                                <h4 class="location-name">洛克外滩源</h4>
+                                <p class="location-reason">
+                                    洛克·外滩源是外滩的起点，拥有充满现代艺术气息的历史街区。这里的建筑风格独特，既有历史底蕴又具现代感，真光大楼、兰心大楼、青年协会大楼等14幢历史保护建筑，都是上海海派文脉的实物承载体，完美契合尊界"传统与现代融合"的品牌理念，是展现尊界艺术品级别工艺的理想场所，也与尊界象征的品质生活方式契合。
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="location-card">
+                            <div class="location-image" style="background-image: url('https://pics7.baidu.com/feed/b64543a98226cffc25894750f80efd9ff703ea54.jpeg@f_auto?token=3731e656996d4892ac93124e39c0a2b0');"></div>
+                            <div class="location-content">
+                                <h4 class="location-name">上海外滩美术馆</h4>
+                                <p class="location-reason">
+                                    地址：洛克外滩源街区，黄浦区虎丘路20号。距离和平饭店步行5-6分钟。优势：外滩地区唯一的非营利性当代美术馆，建筑本身就是艺术品。2010年开馆，由英国建筑师David Chipperfield设计改造，保留了1930年代的装饰艺术风格。空间特色：6层展览空间，总面积834平方米，适合举办各类艺术展览。2025年5月起实行免费开放，便于观众参与。契合度：美术馆的艺术氛围与尊界的艺术品级别工艺完美契合，可以将汽车内饰工艺以艺术品形式呈现。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card fade-in-up">
+                    <h3 class="card-title">
+                        <i class="fas fa-palette"></i>
+                        备选地点
+                    </h3>
+				
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 30px; margin-top: 30px;">
+                        <div style="background: var(--white); padding: 30px; border-radius: 15px; box-shadow: var(--shadow);">
+                            <h4 style="color: var(--primary-color); margin-bottom: 20px; font-size: 1.3rem;">
+                                <i class="fas fa-building" style="color: var(--secondary-color);"></i>
+                                备选艺术空间：外滩艺术中心185空间
+                            </h4>
+                            <p style="line-height: 1.8; margin-bottom: 15px;">
+                                <strong>地址：</strong>黄浦区四川中路185号，和平饭店步行15分钟
+                            </p>
+                            <p style="line-height: 1.8; margin-bottom: 15px;">
+                                <strong>优势：</strong>坐落于百年历史建筑内，意大利文艺复兴府邸式建筑风格，清水红砖墙，具有浓厚的历史文化底蕴。
+                            </p>
+                            <p style="line-height: 1.8; margin-bottom: 15px;">
+                                <strong>空间特色：</strong>保留了建筑原本的拱形砖墙等特色，融入现当代艺术元素，展品与建筑在此共同叙事。
+                            </p>
+                            <p style="line-height: 1.8;">
+                                <strong>契合度：</strong>历史建筑与现代艺术的结合，体现了传统与现代的完美融合，与尊界的品牌理念高度一致。
+                            </p>
+                        </div>
+
+                        <div style="background: var(--white); padding: 30px; border-radius: 15px; box-shadow: var(--shadow);">
+                            <h4 style="color: var(--primary-color); margin-bottom: 20px; font-size: 1.3rem;">
+                                <i class="fas fa-coffee" style="color: var(--secondary-color);"></i>
+                                备选思想汇空间：理想国bar
+                            </h4>
+                            <p style="line-height: 1.8; margin-bottom: 15px;">
+                                <strong>地址：</strong>洛克外滩源街区中部，距离和平饭店步行距离约7分钟
+                            </p>
+                            <p style="line-height: 1.8; margin-bottom: 15px;">
+                                <strong>空间特色：</strong>理想国bar是一处网红文化空间和沪上文化地标。一楼白日咖啡馆以清水混凝土和橡木书架营造氛围，提供丰富的书籍和艺术展览。二楼夜酒书房则以复古浴缸和墨绿丝绒沙发等装饰，营造出文艺气息浓厚的阅读与饮酒空间。
+                            </p>
+                            <p style="line-height: 1.8;">
+                                <strong>契合度：</strong>整体设计强调阅读的仪式感和思想交流，成为城市中的文艺据点。
+                            </p>
+                        </div>
+						
+						<div style="background: var(--white); padding: 30px; border-radius: 15px; box-shadow: var(--shadow);">
+                            <h4 style="color: var(--primary-color); margin-bottom: 20px; font-size: 1.3rem;">
+                                <i class="fas fa-coffee" style="color: var(--secondary-color);"></i>
+                               备选思想汇空间：8½ Otto e Mezzo BOMBANA
+                            </h4>
+                            <p style="line-height: 1.8; margin-bottom: 15px;">
+                                <strong>地址：</strong>圆明园路 协进大楼，和平饭店步行10分钟
+                            </p>
+                            <p style="line-height: 1.8; margin-bottom: 15px;">
+                                <strong>空间特色：</strong>位于上海外滩源的8½ Otto e Mezzo BOMBANA餐厅，自2017年起就一直是米其林指南的二星荣誉得主，一直是高端餐饮的代名词。装潢和服务都给人一种雅致感。
+                            </p>
+                            <p style="line-height: 1.8;">
+                                <strong>契合度：</strong>餐厅拥有得天独厚的黄浦江景观资源，精心规划的景观席位与露天用餐区域，将城市地标景观与室内空间完美融合。
+                    </div>
+                </div>
+            </div>
+        </section>
+
+ 
+
+    <script>
+        // 滚动进度条
+        window.addEventListener('scroll', function() {
+            const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+            const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrollPercent = (scrollTop / scrollHeight) * 100;
+            document.getElementById('scrollProgress').style.width = scrollPercent + '%';
+        });
+
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // 添加滚动动画
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // 观察所有卡片元素
+        document.querySelectorAll('.card, .scene-card, .location-card, .material-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
